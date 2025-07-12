@@ -245,7 +245,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             overflow: TextOverflow.ellipsis,
                           ),
                           subtitle: Text(
-                            '${item.wasEncrypted ? "Chiffré" : "Déchiffré"} (shift: ${item.shift})',
+                            '${item.wasEncrypted ? "Chiffré" : "Déchiffré"} (Clé: ${item.shift})',
                             style: TextStyle(color: Colors.white.withOpacity(0.7)),
                           ),
                           trailing: Text(
@@ -413,7 +413,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Padding(
                       padding: const EdgeInsets.only(left: 4, bottom: 8),
                       child: Text(
-                        'Shift:',
+                        'Clé:',
                         style: TextStyle(
                           color: Colors.white.withOpacity(0.9),
                           fontSize: 16,
@@ -473,7 +473,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ),
                         onPressed: () => _processText(true),
-                        child: const Text('Encrypt'),
+                        child: const Text('Crypter'),
                       ),
                     ),
                     const SizedBox(width: 16),
@@ -488,7 +488,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ),
                         onPressed: () => _processText(false),
-                        child: const Text('Decrypt'),
+                        child: const Text('Décrypter'),
                       ),
                     ),
                   ],
